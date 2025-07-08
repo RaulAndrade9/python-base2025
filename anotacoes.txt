@@ -1,0 +1,10 @@
+-m
+rodar um módulo que já está instalado no python
+
+-m site
+mostra como o python está instalado
+
+python --help
+mostra alguns comandos do python
+
+o shebang é ignorado no windows, funciona apenas no linux e mac
