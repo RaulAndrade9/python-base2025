@@ -8,3 +8,16 @@ python --help
 mostra alguns comandos do python
 
 o shebang é ignorado no windows, funciona apenas no linux e mac
+
+------------------------------------------------------------------------
+Módulo OS
+faz o python se comunicar com o sistema operacional
+
+import os -> para importar o módulo
+help(os) -> no python, para ver as informações do módulo
+os.environ -> mostra as variáveis de ambiente
+os.getenv("LANG") -> pega uma variável em específico, neste caso a LANG
+
+é possível setar a linguagem manualmente pelo terminal:
+set LANG=pt_BR
+
