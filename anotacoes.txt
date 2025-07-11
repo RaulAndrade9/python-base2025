@@ -23,10 +23,14 @@ set LANG=pt_BR
 
 --------------------------------------------------------------------
 criar um ambiente virtual
-python3 -m venv .venv
+python -m venv .venv
 .venv\Scripts\activate
 
 ---------------------
 dir /a -> mostra os arquivos do diretório, inclusive os ocultos
+----------------------------------
+python -m pip install --upgrade pip -> instala melhoria no gerenciador de pacotes
+python -m pip install ipython -> instala o pacote ipython
+
 
 
