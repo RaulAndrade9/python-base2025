@@ -21,3 +21,12 @@ os.getenv("LANG") -> pega uma variável em específico, neste caso a LANG
 é possível setar a linguagem manualmente pelo terminal:
 set LANG=pt_BR
 
+--------------------------------------------------------------------
+criar um ambiente virtual
+python3 -m venv .venv
+.venv\Scripts\activate
+
+---------------------
+dir /a -> mostra os arquivos do diretório, inclusive os ocultos
+
+
