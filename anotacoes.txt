@@ -31,6 +31,24 @@ dir /a -> mostra os arquivos do diretório, inclusive os ocultos
 ----------------------------------
 python -m pip install --upgrade pip -> instala melhoria no gerenciador de pacotes
 python -m pip install ipython -> instala o pacote ipython
+----------------------------------------------------------
+
+bin(numero) -> traz o binário correspondente ao numero
+chr(numero) -> mostra o caracter correspondente ao numero
+id(numero) -> retorna o identificador único do objeto na memória
+dir(int) -> mostra os métodos e atributos disponíveis em um objeto, módulo, classe
+
+------------------------------------------------------------
+bytes(texto, "utf-8") -> transforma a string em bytes
+list(bytes(texto, "utf-8")) -> retorna uma lista com os bytes do texto, mostrando a posição de cada um na tabela informada
+
+-------------------------------------
+.endswitch("a" -> verifica se o texto termina com a)
+.startswitch("a" -> verifica se o texto começa com a)
+--------------------------------------------------
+sorted(texto) -> ordena em ordem crescente / alfabética
+reversed(texto) -> ordenam em ordem decrescente
+
 
 
 
