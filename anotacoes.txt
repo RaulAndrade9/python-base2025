@@ -49,6 +49,7 @@ list(bytes(texto, "utf-8")) -> retorna uma lista com os bytes do texto, mostrand
 sorted(texto) -> ordena em ordem crescente / alfabética
 reversed(texto) -> ordenam em ordem decrescente
 
-
+----------------------------------------------------
+print("\N{nome do emoji}") -> exibe um emoji, necessário pegar o nome no unicode explorer
 
 
