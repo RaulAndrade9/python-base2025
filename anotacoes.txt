@@ -52,4 +52,10 @@ reversed(texto) -> ordenam em ordem decrescente
 ----------------------------------------------------
 print("\N{nome do emoji}") -> exibe um emoji, necessário pegar o nome no unicode explorer
 
+-----------------------------------------------------
+
+lista.insert(0, "raul") -> insere o nome raul na posição 0 da lista
+head,*body,tail = lista -> atribui as variávies head: primeiro elemento da lista, body: elementos do meio 
+da lista, tail: ultimo elemento da lista
+
 
