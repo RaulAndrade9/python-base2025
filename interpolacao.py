@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 email_templ = """
 Olá, %(nome)s,
 

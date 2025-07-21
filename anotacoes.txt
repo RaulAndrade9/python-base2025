@@ -58,4 +58,26 @@ lista.insert(0, "raul") -> insere o nome raul na posição 0 da lista
 head,*body,tail = lista -> atribui as variávies head: primeiro elemento da lista, body: elementos do meio 
 da lista, tail: ultimo elemento da lista
 
+-----------------------------------------------------
+set -> bastante útil para remover itens duplicados
+
+união de sets:
+set1.union(set2) ou set1 | set2
+
+intersecção de sets:
+set1.interserction(set2) ou set1 & set2
+
+diferença entre sets:
+set1.difference(set2) ou set1 - set2 -> mostra o que tem no set1 e não tem no set2
+a ordem de como os sets estão dispostos é importante
+
+diferença simétrica (mostra o que não tem em comum nos sets)
+set.symmetric_diference(set2) ou set1 ^ set2
+---------------------------------------------------------------
+Dicionarios:
+
+dicionario_1.update(dicionario_2) -> adciona as info do dict 2 ao dict 1
+
+dic3 = {**dic, **dic2} -> desempacota os dicionarios em um outro dicionario_1
+
 
