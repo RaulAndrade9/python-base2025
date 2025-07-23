@@ -1,0 +1,140 @@
+Escreva uma função que receba uma string e retorne um dicionário com a frequência de cada caractere (exceto espaços).
+
+Exemplo de entrada:
+"python é divertido"
+
+texto = "python é divertido"
+dict = {}
+lista = []
+
+for letra in texto:
+  if letra != " ":
+    lista.append(letra.upper())
+
+for letra in lista:
+  if letra not in dict.keys():
+    dict[letra] = 1
+  else:
+    dict[letra] +=1
+
+print(dict)
+
+
+--------------------------------------------------------------------------------
+Crie uma função que recebe uma string contendo várias palavras separadas por espaço e retorna uma lista com as palavras
+ordenadas em ordem alfabética, sem repetições, e ignorando letras maiúsculas/minúsculas.
+
+Exemplo de entrada:
+"Banana maçã banana Uva pera maçã"
+
+texto = "Banana maçã banana Uva pera maçã".upper()
+lista = []
+lista = texto.split(" ")
+lista_nova =[]
+for palavra in lista:
+  if palavra not in lista_nova:
+    lista_nova.append(palavra)
+print(sorted(lista_nova))
+--------------------------------------------------------------------------------------
+
+
+  """
+Implemente uma função que recebe dois números inteiros inicio e fim e retorna uma lista com todos os números primos 
+nesse intervalo (inclusive inicio e fim, se forem primos).
+Dica: Use uma função auxiliar para verificar se um número é primo."""
+
+inicio = int(input("Informe um número inicial: "))
+final = int(input("Informe o número final: "))
+
+while inicio > final:
+  final = int(input("O número final precisa ser maior que o início. "))
+
+verifica_primos = list(range(inicio, final + 1))
+
+def primos(numeros):
+  retorna_primos = []
+  for numero in numeros:
+    temp = []
+    cont = 2
+    while cont <= int((numero ** 0.5) +1):
+      temp.append(numero % cont)
+      cont +=1
+    if 0 not in temp:
+      retorna_primos.append(numero)
+
+  return retorna_primos
+
+
+exibe = primos(verifica_primos)
+print(exibe)
+
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+"""
+Crie um programa que simule um pequeno sistema de estoque com dicionários. O programa deve permitir:
+Adicionar um novo produto (nome e quantidade) / Atualizar a quantidade de um produto existente
+Remover um produto / Exibir o estoque atual ordenado por nome
+Faça as funções separadas para cada operação."""
+
+dict = {
+  "arroz": 10,
+  "feijão": 8,
+  "macarrão": 15,
+  "açúcar": 5,
+  "sal": 12,
+  "óleo": 7
+}
+
+def produto_quantidade(dicionario, nome_produto, quantidade_produto):
+  dicionario[nome_produto] = quantidade_produto
+
+
+def exclui_produto(nome_produto):
+  del dict[nome_produto]
+
+def exibe_estoque(dicionario):
+  for chave, valor in sorted(dicionario.items()):
+    print(f"{chave} --- {valor}")
+
+
+produto_quantidade(dict, "refrigerante", 10)
+exibe_estoque(dict)
+
+----------------------------------------------------------------------------------------------------
+"""
+Você tem uma lista de dicionários representando compras, como no exemplo abaixo:
+compras = [
+    {"categoria": "alimento", "valor": 25.50},
+    {"categoria": "vestuário", "valor": 100.00},
+    {"categoria": "alimento", "valor": 15.75},
+    {"categoria": "livros", "valor": 45.90}
+]
+Crie uma função que recebe essa lista e retorna um dicionário com a soma total dos valores por categoria.
+"""
+
+compras = [
+    {"categoria": "alimento", "valor": 25.50},
+    {"categoria": "vestuário", "valor": 100.00},
+    {"categoria": "alimento", "valor": 15.75},
+    {"categoria": "livros", "valor": 45.90}
+]
+
+def dict_total_valores(lista):
+  total_valores = {}
+  categoria = []
+  valor = []
+  for item in compras:
+    categoria= item["categoria"]
+    valor = item["valor"]
+    if categoria not in total_valores:
+      total_valores[categoria] = valor
+    else:
+      total_valores[categoria]+= valor
+  return total_valores
+  
+  
+
+print(dict_total_valores(compras))

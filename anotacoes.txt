@@ -78,6 +78,9 @@ Dicionarios:
 
 dicionario_1.update(dicionario_2) -> adciona as info do dict 2 ao dict 1
 
-dic3 = {**dic, **dic2} -> desempacota os dicionarios em um outro dicionario_1
+dic3 = {**dic, **dic2} -> desempacota os dicionarios em um outro dicionario
 
 
+-------------------------------------------------------------------------------
+Fatiamento de string
+string.lstrip(caracter) -> remove todos os caracteres que estão a esquerda
