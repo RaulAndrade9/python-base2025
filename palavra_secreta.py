@@ -31,4 +31,5 @@ while tentativas >=0:
     tentativa_palavra = input("Qual a palavra?")
     if tentativa_palavra == palavra_secreta:
         print(f"Parabéns! Voce acertou a palavra: {palavra_secreta}")
+        break
     tentativas -= 1
