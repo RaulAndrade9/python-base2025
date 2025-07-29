@@ -84,3 +84,60 @@ dic3 = {**dic, **dic2} -> desempacota os dicionarios em um outro dicionario
 -------------------------------------------------------------------------------
 Fatiamento de string
 string.lstrip(caracter) -> remove todos os caracteres que estão a esquerda
+
+-----------------------------------------------------------------------------------
+filesystem:
+
+mkdir -> cria uma pasta
+mkdir pasta\pasta_interna -> cria uma pasta interna dentro da pasta
+cd -> exibe ou mostra o diretório atual
+cd.. -> volta para a pasta anterior ao diretório atual
+dir -> lista os arquivos da pasta
+type nul > arquivo.txt -> pelo prompt do windows, cria um arquivo vazio
+
+em python:
+os.listdir(".") -> lista os arquivos do diretório atual
+os.curdir - > se o "." não for o caractere correspondente para ver o diretório atual, dará erro
+o correto é utilizar o curdir para evitar isso ficando assim:
+os.listdir(os.curdir)
+
+os.mkdir("pasta") -> cria uma pasta
+os.makedirs("pasta",exist_ok=True) -> cria a pasta e caso já exista, não dará nenhum erro
+
+path = os.path.join("pasta", "subpasta") - utilizamos dessa forma pois dependendo do sistema operacional
+o caminho dos arquivos é separado por "/" ou "\"
+
+os.makedirs(path, exist_ok=True) -> jeito correto de fazer
+
+*****************************************
+1º passo
+- Criar o caminho
+path = os.path.join("pasta", "subpasta")
+filepath = os.join.path(path, "arquivo.txt")
+*** se a pasta não tiver sido criada, dará erro
+-- dessa forma só é criado o caminho para o arquivoa
+
+2º passo
+open(filepath, "w").close()
+dessa forma o arquivo é criado
+
+3º passo
+atribuir a uma variavel o open(filepath)
+arquivo = open(filepath)
+arquivo = open(filepath, "modulo ("r", "w", "a"))
+arquivo.close() -> após utilizar o arquivo, se não as informações não ficam salvas
+arquivo. read()  - é preciso abrir o arquivo em modo de leitura antes
+******************************************
+
+os.path.basename(filepath) -> mostra o nome do arquivo
+os.path.abspath(path) -> mostra o caminho absoluto 
+
+open(filepath).read() -> le o arquivo 
+print(open(filepath).read()) -> exibe através do print
+***************************************************
+CONTEXT MANAGER:
+ - através da palavra with
+ with open(filepath, "a") as arquivo:
+
+
+
