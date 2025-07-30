@@ -139,5 +139,16 @@ CONTEXT MANAGER:
  - através da palavra with
  with open(filepath, "a") as arquivo:
 
+**********************************************************
+Biblioteca Pathlib
 
+Path("pasta") -> retorna WindowsPath('pasta1')
 
+path = Path("pasta") -> caminho da pasta
+path/"nome_arquivo.txt" -> caminho para um arquivo
+
+path / "outrapasta" -> cria um caminho para outra pasta
+(path / "outrapasta").mkdir() -> cria a pasta
+
+filepath.write_text("text") -> escreve no arquivo
+filepath.read_text() -> le o arquivo

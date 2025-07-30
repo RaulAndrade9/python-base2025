@@ -1,29 +1,34 @@
 #!/usr/bin/env python3
-email_templ = """
-Olá, %(nome)s,
+import os
+import sys
 
-Este produto é ótimo para resolver %(texto)s
+arguments = sys.argv[1:]
+filename = arguments[0]
+templatename = arguments[1]
+if not arguments:
+    print("Informe o nome do arquivo de e-mails")
+    sys.exit(1)
 
-Tem interesse em comprar este %(produto)s
+path = os.curdir
+filepath = os.path.join(path, filename)
+templatepath = os.path.join(path, templatename)
 
-Clique agora em %(link)s
 
-Apenas %(quantidade)d disponíveis
-
-Preço promocional %(preco).2f
-"""
-
-clientes = ["Joao", "Maria", "Joao"]
-
-for cliente in clientes:
+for line in open(filepath):
+    name, email = line.split(",")
+    
+    print(f"Enviando e-mail para {email}")
+    print()
     print(
-        email_templ %{
-            "nome": cliente,
+        open(templatepath).read() %{
+            "nome": name,
             "produto": "caneta",
             "texto": "Escrever muito bem",
             "link": "http//canetaslegais.com",
             "quantidade": 10,
             "preco": 17.20,
 
+
         }
     )
+    print("-" * 50)
