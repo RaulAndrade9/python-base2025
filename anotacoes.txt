@@ -152,3 +152,8 @@ path / "outrapasta" -> cria um caminho para outra pasta
 
 filepath.write_text("text") -> escreve no arquivo
 filepath.read_text() -> le o arquivo
+-----------------------------------------------
+Tratamento de erros:
+
+LYBL = Look before you leap
+EAFP = Easy to ask Forgiveness than permission
