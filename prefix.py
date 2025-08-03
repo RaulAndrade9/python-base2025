@@ -62,8 +62,11 @@ for num in nums:
     else:
         num = int(num)
     validated_nums.append(num)
-
-n1, n2 = validated_nums
+try:
+    n1, n2 = validated_nums
+except ValueError as e:
+    print(str(e))
+    sys.exit(1)
 
 if operation == "sum":
     result = n1 + n2
@@ -79,7 +82,13 @@ filepath = os.path.join(path, "prefix.log")
 timestamp = datetime.now().isoformat()
 user = os.getenv("USER", "Anonymous")
 
-with open (filepath, "a") as file_:
-    file_.write(f"{timestamp} -{user}- {operation}, {n1}, {n2} = {result}\n")
-
 print(f"O resultado é {result}")
+
+try:
+    with open (filepath, "a") as file_:
+        file_.write(f"{timestamp} -{user}- {operation}, {n1}, {n2} = {result}\n")
+except PermissionError as p:
+    print(str(p))
+    sys.exit(1)
+
+

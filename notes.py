@@ -40,6 +40,7 @@ if arguments[0] == "read":
             print()
 
 if arguments[0] == "new":
+    #TODO excpetion
     title = arguments[1]
     text = [
         f"{title}",

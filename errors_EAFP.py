@@ -6,7 +6,7 @@ import sys
 try:
     raise RuntimeError("Ocorreu um erro")
 except Exception as e :
-    print(f"[erro]: {e}")
+    print(f"[erro]: {str(e)}")
 
 try: 
     input("...")#race conditions

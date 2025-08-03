@@ -28,8 +28,15 @@ arguments = {
 }
 
 for arg in sys.argv[1:]:
-    #TODO: tratar value error
-    key, value = arg.split("=")
+    try:
+        key, value = arg.split("=")
+    except ValueError as e:
+        #TODO Logging
+        print(f"[Erro]{str(e)}")
+        print("You need to use '='")
+        print(f"You passed {arg}")
+        print("Try with --key=value")
+        sys.exit(1)
     key = key.lstrip("-").strip()
     value = value.strip()
     if key not in arguments:
@@ -56,5 +63,15 @@ msg = {
 }
 
 
+#usando get
+#message = msg.get(current_language, msg["en_US"])
 
-print(msg[current_language] *int(arguments["count"]))
+#LBYL
+try:
+    message = msg[current_language]
+except KeyError as e:
+    print(f"[Error]{str(e)}")
+    print(f"Invalid message, choose from {list(msg.keys())}")
+    sys.exit(1)
+
+print( message * int(arguments["count"]))
