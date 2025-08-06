@@ -158,3 +158,8 @@ Tratamento de erros:
 LYBL = Look before you leap
 EAFP = Easy to ask Forgiveness than permission
 Bare except - captura qualquer exceção que ocorrer
+
+---------------------------------------------------
+logs
+import logging -> para importar a biblioteca de logs
+logging.error(mensagem de erro)
