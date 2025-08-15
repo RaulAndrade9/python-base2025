@@ -1,0 +1,8 @@
+title:Meu post
+tags: tech, geral
+date: 2025-11-08
+published: 1
+---
+Esse é o meu post
+aqui vai o conteúdo do post
+aqui é final

@@ -163,3 +163,29 @@ Bare except - captura qualquer exceção que ocorrer
 logs
 import logging -> para importar a biblioteca de logs
 logging.error(mensagem de erro)
+existe um outro output padrão, que é o standard error
+é para la que vao os erros
+
+logging levels -> mostra os níveis de logging
+log = logging.logger("logs.py",logging.DEBUG ) -> cria uma instancia 
+do debuger, podendo setar o level que voce quer exibir.
+1º identificador (deve ser um nome significativo, pode ser utilizado o __NAME__)
+2°o nível que voce quer exibir, por padrão só exibe do warning pra cima
+
+--------------------------------------------------------------------------
+
+for line in open("arquivo.txt"):
+    print(line)
+    if line == ("---"): #para o loop quando ahcar o ---
+    break
+
+--------------------------------------------------------
+list comprehension
+original = [1,2,3]
+dobrada=[]
+dobrada = [n*2 for n in original]
+
+----------------------------------
+
+*****
+o .strip() -> remove o "/n"

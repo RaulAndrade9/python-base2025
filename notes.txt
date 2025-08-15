@@ -1,2 +1,6 @@
 primeira linha	geral	texto geral
 segunda linha	tech	texto sobre java
+Minha terceira nota	redes	Texto qualquer sobre redes
+Repetições	python	while e for
+Novo Titulo	geral2	isso ai
+Texto114	internet	isso ai de novo
