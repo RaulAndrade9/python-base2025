@@ -189,3 +189,11 @@ dobrada = [n*2 for n in original]
 
 *****
 o .strip() -> remove o "/n"
+
+--------------------------------
+loggin com uma conf mais basica:
+import logging
+
+logging.basicConfig(level=logging.WARNING,
+                    format="%(asctime)s %(name)s %(message)s")
+log = logging.getLogger("teste.py")
