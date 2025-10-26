@@ -1,14 +1,5 @@
-#!usr/bin/env python3
+lista = ([1,2,3], [4,5,6], [7,8,9])
 
-import logging
+nova = list(map(sum,lista))
 
-logging.basicConfig(level=logging.WARNING,
-                    format="%(asctime)s %(name)s %(message)s")
-log = logging.getLogger("teste.py")
-
-try:
-    result = 1/0
-    print(result)
-except ZeroDivisionError as e:
-    log.error(f"{str(e)}")
-    
+print(nova)
