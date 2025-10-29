@@ -1,5 +1,1 @@
-lista = ([1,2,3], [4,5,6], [7,8,9])
-
-nova = list(map(sum,lista))
-
-print(nova)
+print(36**0.5)
